@@ -566,13 +566,14 @@ a:visited {
 }
 
 .section-heading {
-  margin-bottom: 50px;
+  margin-bottom: 30px;
 }
 .section-heading h2 {
   font-size: 48px;
   font-weight: 900;
   line-height: 1.1;
   text-transform: uppercase;
+	margin-bottom: 0;
 }
 .section-heading h5 {
   color: #F56960;
@@ -2410,7 +2411,7 @@ input[type=submit]:focus {
   margin: 10px;
 }
 .home-banner-items .overlay {
-  background-color: rgba(21, 21, 21, 0.51);
+  background-color: rgba(21, 21, 21, 0.70);
 }
 @media screen and (max-width: 991px) {
   .home-banner-items .banner-content .banner-title {
@@ -2505,7 +2506,7 @@ input[type=submit]:focus {
 
 .trip-search-section .trip-search-inner {
   box-shadow: 0px 15px 25px 0px rgba(0, 0, 0, 0.08);
-  padding: 36px 40px 42px;
+  padding: 36px 40px 11px;
   position: relative;
   -webkit-align-items: flex-end;
   -moz-align-items: flex-end;
@@ -2665,6 +2666,7 @@ input[type=submit]:focus {
   box-shadow: 0px 0px 25px 0px rgba(0, 0, 0, 0.1);
   padding: 8px;
   position: relative;
+	min-height: 411px;
 }
 .desti-item .desti-image {
   position: relative;
@@ -8753,10 +8755,193 @@ product checkout css
 .sidebar .widget:last-child {
   margin-bottom: 0;
 }
+
+
+.elementor-image-box-wrapper {
+    display: flex;
+	gap:10px;
+}
+
+.elementor-image-box-wrapper .elementor-image-box-img {
+    width: 50px;
+}
+
+.elementor-image-box-wrapper .elementor-image-box-img a {
+	padding: 0px;
+}
+
+.elementor-image-box-wrapper .elementor-image-box-content {
+    width:170px;
+}
+
+.elementor-image-box-wrapper .elementor-image-box-content  .elementor-image-box-title {
+    margin-bottom: 0px;
+    color: #FFFFFF;
+    font-family: "Poppins", Sans-serif;
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.elementor-image-box-wrapper .elementor-image-box-content  .elementor-image-box-title a {
+	padding: 0px;
+}
+
+.elementor-image-box-wrapper .elementor-image-box-content .elementor-image-box-description {
+    color: #0eb9e4;
+    font-family: "Jost", Sans-serif;
+    font-size: 14px;
+    font-weight: 500;
+	margin: 0px;
+}
+
+.search-m-title {
+    position: absolute;
+    top: -110px;
+    text-align: center;
+    width: 100%;
+    color: #fff;
+    max-width: 1170px;
+    margin: auto;
+    left: 0;
+    right: 0;
+}
+
+ .search-m-title h2{
+    color: #fff;
+    font-weight: 700;
+    font-size: 34px;
+    font-family: 'Open Sans';
+}
+
+.search-m-title h2 span, .search-m-title ul span{ 
+color: #F56960}
+
+ .search-m-title ul{
+    display: flex;
+    justify-content: space-around;
+	 list-style: none;
+	 font-weight: 600;
+	 padding: 0;
+}
+
+
+.search-logo-l {
+    display: flex;
+    justify-content: space-around;
+	 list-style: none;
+	 font-weight: 600;
+	padding: 0;
+	margin: 25px 0 0 0;
+	text-align: center;
+}
+
+.search-logo-l img {
+	
+	width: 150px;
+}
+
+.wrapper.wrapper_row.cascoon-node.cascoon-xs--12.align--left {
+	
+	border-bottom: 1px solid #e9e9e9 !important;
+}
+
+
+.service-content-wrap .service-header h4 {
+	margin: 0px;
+}
+
+
+ .service-content-wrap.mam  img{
+    min-width: 128.5%;
+    margin-left: -40px;
+    margin-top: -40px;
+    margin-bottom: 20px;
+}
+
+.service-content-wrap.mam {
+    margin: 0;
+}
+
+.home-pop .popup-inner {
+    width: 500px;
+    border: solid 10px #fff;
+    box-shadow: 0px 0px 30px 0px rgba(2, 2, 2, 1.00);
+}
+
+.popup-wraper.home-pop .popup-close-btn a {
+	    background: #fff;
+}
+
+.popup-wraper.home-pop .popup-close-btn {
+    top: -9px;
+    right: -9px;
+}
+
+.fixed-header .elementor-image-box-wrapper .elementor-image-box-content .elementor-image-box-title {
+    
+    color: #000;
+}
+
+
 @media screen and (max-width: 991px) {
+	.shape-search-section .slider-shape {
+		margin-top: 0;
+	}
+	
+	
   .sidebar {
     margin-top: 50px;
   }
+	
+	.elementor-image-box-wrapper .elementor-image-box-content {
+    width: 140px;
 }
+	
+	.home-pop .popup-inner {
+	width: 350px;
+}
+	
+}
+
+
+
+@media screen and (max-width: 767px) {
+	
+	    .home-pop .popup-inner {
+        width: 93%;
+        margin: auto;
+        top: 20%;
+    }
+	
+	.service-content-wrap.mam {
+    margin: 0;
+    overflow: hidden;
+}
+	
+	.search-logo-l img {
+    width: 60px;
+}
+	
+	.search-m-title ul {
+ 
+    flex-wrap: wrap;
+    margin: 0;
+}
+	
+	.search-m-title ul li {
+    width: 50%;
+    font-size: 12px;
+}
+	
+	.search-m-title {
+    top: -240px;
+	}
+	
+	.search-m-title h2 {
+    font-size: 25px;
+	}
+	
+}
+
 
 /*# sourceMappingURL=style.css.map */
