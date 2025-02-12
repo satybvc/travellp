@@ -53,7 +53,7 @@ $(document).ready(function () {
         },
         submitHandler: function (form) {
             //const form = document.getElementById('leadForm');
-            const scriptURL = 'https://script.google.com/macros/s/AKfycbxmGJdaWoj2S6YZ1IftyDm_41RgD1TVvuDOgRFPktBKFEul4sZvZtkL5tSfI60KrTx3sA/exec';
+            const scriptURL = 'https://script.google.com/macros/s/AKfycbx3p4EbV2bb6QoJVfahoIYsG1NLjgKBOQxhlsN48VZ0c8v8d5e-RigRTqgzmH7B4xf5/exec';
             form.addEventListener('submit', e => {
                 e.preventDefault()
                 fetch(scriptURL, { method: 'POST', body: new FormData(form) })
