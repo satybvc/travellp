@@ -138,13 +138,16 @@
                               </div>
                               <form class="contact-from">
                                  <p>
-                                    <input type="text" name="name" placeholder="Your Name*">
+                                   <input type="text" id="name" name="name"  placeholder="Your Name*" required>
                                  </p>
                                  <p>
-                                    <input type="email" name="email" placeholder="Your Email*">
+                                    <input type="email" id="email" name="email"  placeholder="Your Email*" required>
                                  </p>
                                  <p>
-                                    <textarea rows="8" placeholder="Your Message*"></textarea>
+                                    <input type="tel" id="phone" name="phone"  placeholder="Your Mobile*" required>
+                                 </p>
+                                 <p>
+                                    <textarea rows="8"  id="message" name="message" required></textarea>
                                  </p>
                                  <p>
                                     <input type="submit" name="submit" value="SUBMIT MESSAGE">
@@ -362,5 +365,6 @@
       <script src="/assets/vendors/slick/slick.min.js"></script>
       <script src="/assets/js/jquery.slicknav.js"></script>
       <script src="/assets/js/custom.min.js"></script>
+      <script src="/assets/js/scripts.js"></script>
    </body>
 </html>
