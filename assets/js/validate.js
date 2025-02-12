@@ -52,13 +52,18 @@ $(document).ready(function () {
             error.appendTo(element.parent());
         },
         submitHandler: function (form) {
+            $("#siteLoader").show();
             //const form = document.getElementById('leadForm');
-            const scriptURL = 'https://script.google.com/macros/s/AKfycbx3p4EbV2bb6QoJVfahoIYsG1NLjgKBOQxhlsN48VZ0c8v8d5e-RigRTqgzmH7B4xf5/exec';
+            const scriptURL = 'https://script.google.com/macros/s/AKfycbxmGJdaWoj2S6YZ1IftyDm_41RgD1TVvuDOgRFPktBKFEul4sZvZtkL5tSfI60KrTx3sA/exec';
             form.addEventListener('submit', e => {
                 e.preventDefault()
                 fetch(scriptURL, { method: 'POST', body: new FormData(form) })
-                    .then(response => {alert("Thank you! your form is submitted successfully."); })
+                    .then(response => {
+                        $("#siteLoader").hide();
+                        //alert("Thank you! your form is submitted successfully.");
+                        $('#formResponse').html('<p class="text-success mt-2">Thank you! your form is submitted successfully.</p>'); })
                     .then(() => { 
+                        $("#siteLoader").hide();
                         window.location.reload(); 
                         console.error('Suceess!', response);
                     })
