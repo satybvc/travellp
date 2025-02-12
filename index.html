@@ -884,6 +884,18 @@
                </div>
             </div>
          <!-- header html end -->
+          <!-- Popup html start form here -->
+         <div class="popup-wraper">
+            <div class="popup-inner" style="height:200px">
+               <a href="tel:+1-855-855-855">
+               
+                  <img src="assets/images/popup.jpg" alt="popup" height="50%">
+               </a>
+               <div class="popup-close-btn">
+                  <a href="#"></a>
+               </div>
+            </div>
+         </div>
       </div>
 
       <!-- JavaScript -->
@@ -899,5 +911,12 @@
       <script src="assets/vendors/slick/slick.min.js"></script>
       <script src="assets/js/jquery.slicknav.js"></script>
       <script src="assets/js/custom.min.js"></script>
+       <!-- js for popup  -->
+       <script>
+         $( document ).on( 'click', '.popup-close-btn a', function(e){
+            e.preventDefault();
+            $('.popup-wraper').hide();
+         });
+      </script>
    </body>
 </html>
