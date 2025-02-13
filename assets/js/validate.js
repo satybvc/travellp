@@ -15,10 +15,6 @@ $(document).ready(function () {
                 minlength: 10,
                 maxlength: 15
             },
-            address: {
-                required: true,
-                minlength: 5
-            },
             message: {
                 required: true,
                 minlength: 10
@@ -39,10 +35,6 @@ $(document).ready(function () {
                 minlength: "Phone number must be at least 10 digits",
                 maxlength: "Phone number must not exceed 15 digits"
             },
-            address: {
-                required: "Please enter your address",
-                minlength: "Address must be at least 5 characters long"
-            },
             message: {
                 required: "Please enter your message",
                 minlength: "Message must be at least 10 characters long"
@@ -52,24 +44,35 @@ $(document).ready(function () {
             error.appendTo(element.parent());
         },
         submitHandler: function (form) {
-            $("#siteLoader").show();
-            //const form = document.getElementById('leadForm');
-            const scriptURL = 'https://script.google.com/macros/s/AKfycbxmGJdaWoj2S6YZ1IftyDm_41RgD1TVvuDOgRFPktBKFEul4sZvZtkL5tSfI60KrTx3sA/exec';
-            form.addEventListener('submit', e => {
-                e.preventDefault()
-                fetch(scriptURL, { method: 'POST', body: new FormData(form) })
-                    .then(response => {
-                        $("#siteLoader").hide();
-                        //alert("Thank you! your form is submitted successfully.");
-                        $('#formResponse').html('<p class="text-success mt-2">Thank you! your form is submitted successfully.</p>'); })
-                    .then(() => { 
-                        $("#siteLoader").hide();
-                        window.location.reload(); 
-                        console.error('Suceess!', response);
-                    })
+            const scriptURL = 'https://script.google.com/macros/s/AKfycbzgw4NBSztEiNoE3Vf5DF454NMtSgdreVPwplgzuSVgrcTj9mOnend72u85EMAQEkaC/exec';
 
-                    .catch(error => console.error('Error!', error.message))
+            // Show Loader
+            //$("#siteLoader").show();
+
+            fetch(scriptURL, {
+                method: 'POST',
+                body: new FormData(form)
             })
+            .then(response => response.json()) // Ensure JSON response
+            .then(data => {
+                console.log("Success:", data);
+
+                // Show success message
+                $('#formResponse').html('<p class="text-success mt-2">Thank you! Your form has been submitted successfully.</p>');
+
+                // Hide loader
+                $("#siteLoader").hide();
+
+                // Reset the form
+                form.reset();
+            })
+            .catch(error => {
+                console.error('Error!', error.message);
+                $('#formResponse').html('<p class="text-danger mt-2">Something went wrong. Please try again.</p>');
+                $("#siteLoader").hide();
+            });
+
+            return false; // Prevent default form submission
         }
     });
 });
