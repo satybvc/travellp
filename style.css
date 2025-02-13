@@ -7992,6 +7992,9 @@ product checkout css
   position: relative;
   z-index: 1;
 }
+
+/*
+
 .popup-wraper .popup-inner:before {
   background-color: #F3F3F3;
   -webkit-border-radius: 50%;
@@ -8011,6 +8014,9 @@ product checkout css
   transform: translate(0, -50%);
   z-index: -1;
 }
+
+
+*/
 .popup-wraper .popup-image {
   width: 32%;
 }
@@ -8810,19 +8816,19 @@ product checkout css
     color: #fff;
     font-weight: 700;
     font-size: 34px;
-    font-family: 'Open Sans';
+    font-family: 'Open Sans'; 
 }
 
 .search-m-title h2 span, .search-m-title ul span{ 
 color: #F56960}
 
- .search-m-title ul{
+ .search-m-title ul{ 
     display: flex;
     justify-content: space-around;
 	 list-style: none;
 	 font-weight: 600;
 	 padding: 0;
-}
+} 
 
 
 .search-logo-l {
@@ -8883,6 +8889,91 @@ color: #F56960}
 }
 
 
+
+.inner-flight-banner .search-m-title {
+    position: relative;
+    top: 0;
+    text-align: left;
+    width: 100%;
+    color: #fff;
+    max-width: none;
+    margin: auto;
+    left: 0;
+    right: 0;
+}
+
+.inner-flight-banner .search-m-title ul {
+	margin: 0;
+	display: block;
+}
+
+.inner-flight-banner .search-m-title ul li{
+	
+	font-size: 20px;
+	margin: 15px 0;
+}
+
+.inner-flight-banner .search-logo-l {
+    opacity: 0.9;
+}
+
+.inner-flight-banner .dashboard-box {
+    background-color: #ffffff;
+        padding: 0 0px 25px;
+    font-size: 12px;
+    margin-bottom: 30px;
+	box-shadow: 0px 0px 30px 0px rgba(2, 2, 2, 1.00);
+}
+
+
+.inner-flight-banner .dashboard-box h4 {
+    background: #0791BE;
+    color: #fff;
+    padding: 10px;
+}
+
+.inner-flight-banner .dashboard-box .row{
+    padding: 0 20px;
+}
+
+.datepicker-days table thead tr th {
+    color: #fff;
+}
+
+.gif-flight {
+    width: 300px;
+    margin: auto;
+}
+
+
+.thank-page-section .special-content {
+	max-width: 1000px;
+	margin: auto
+}
+
+.thank-page-section .special-content h3 span{
+	color: #0791BE;
+}
+
+.thank-page-section  .header-btn {
+    justify-content: center;
+	margin: 50px 0;
+}
+
+.thank-page-section .elementor-image-box-wrapper .elementor-image-box-content .elementor-image-box-title {
+	color: #000;
+}
+
+.myrate {
+    max-width: 430px;
+    margin-left: 20px;
+}
+
+.thank-page-section {
+	
+	margin: 50px 0 100px 0
+}
+
 @media screen and (max-width: 991px) {
 	.shape-search-section .slider-shape {
 		margin-top: 0;
@@ -8906,6 +8997,24 @@ color: #F56960}
 
 
 @media screen and (max-width: 767px) {
+	
+	.gif-flight {
+    width: 191px;
+    margin: auto;
+}
+	
+	.myrate {
+   
+    margin-left: 0px;
+		width: 100%
+}
+	
+	
+	.inner-flight-banner .search-m-title ul li {
+    font-size: 20px;
+    margin: 4px 0;
+    width: 100%;
+}
 	
 	    .home-pop .popup-inner {
         width: 93%;
